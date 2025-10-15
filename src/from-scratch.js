@@ -1,19 +1,33 @@
-const addToFrontOrBack = () => {
+const addToFrontOrBack = (arr, value, isFront) => {
+  if (isFront === true) {
+    arr.unshift(value);
+  } else {
+    arr.push(value);
+  }
 };
 
-const reverseString = () => {
+const reverseString = (string) => {
+  const array = string.split("")
+  return array.reverse().join("");
 };
 
-const newArrayFullOf = () => {
+const newArrayFullOf = (value, numOfValue) => {
+  const newArray = new Array(numOfValue);
+  return newArray.fill(value);
 };
 
-const insertIntoMiddle = () => {
+const insertIntoMiddle = (arr, value) => {
+  const middleOfIndex = Math.floor(arr.length / 2);
+  arr.splice(middleOfIndex, 0, value);
+
 };
 
-const deleteFromMiddle = () => {
+const deleteFromMiddle = (arr) => {
+  const middleOfIndex = Math.floor(arr.length / 2);
+  arr.splice(middleOfIndex, 1)
 };
 
-const isRightIndex = () => {
+const isRightIndex = (arr, value, index) => {
 };
 
 const roundAllNumsDown = () => {
